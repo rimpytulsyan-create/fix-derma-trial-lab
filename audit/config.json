@@ -1,0 +1,44 @@
+{
+  "auditDate": "2026-10-27",
+  "auditWindowHours": "14:00 - 16:00 IST",
+  "platforms": [
+    "Blinkit",
+    "Zepto",
+    "Swiggy Instamart"
+  ],
+  "pincodes": [
+    { "pincode": "122002", "city": "Gurugram", "area": "DLF Phase 1 / Cyber City" },
+    { "pincode": "122003", "city": "Gurugram", "area": "Sector 48 / Sohna Road" },
+    { "pincode": "122009", "city": "Gurugram", "area": "DLF Phase 3" },
+    { "pincode": "122018", "city": "Gurugram", "area": "Golf Course Extension" },
+    { "pincode": "122011", "city": "Gurugram", "area": "Sector 54 / Golf Course Road" },
+    { "pincode": "560034", "city": "Bengaluru", "area": "Koramangala" },
+    { "pincode": "560038", "city": "Bengaluru", "area": "Indiranagar" },
+    { "pincode": "560102", "city": "Bengaluru", "area": "HSR Layout" },
+    { "pincode": "560066", "city": "Bengaluru", "area": "Whitefield" },
+    { "pincode": "560103", "city": "Bengaluru", "area": "Bellandur / Outer Ring Road" }
+  ],
+  "competitors": [
+    "The Derma Co",
+    "Minimalist",
+    "Dot & Key",
+    "Dr. Sheth's",
+    "Aqualogica"
+  ],
+  "skuBasket": [
+    { "brand": "Fixderma", "sku": "Fixderma Shadow SPF 50+ Gel", "pack_size": "40g" },
+    { "brand": "Fixderma", "sku": "Fixderma Shadow SPF 50+ Gel", "pack_size": "75g" },
+    { "brand": "Fixderma", "sku": "Fixderma Shadow SPF 50+ Cream", "pack_size": "75g" },
+    { "brand": "Fixderma", "sku": "Fixderma Salyzap Gel for Acne", "pack_size": "20g" },
+    { "brand": "Fixderma", "sku": "Fixderma Salyzap Daily Face Cleanser", "pack_size": "60ml" },
+    { "brand": "Fixderma", "sku": "Fixderma 17% Vitamin C Serum", "pack_size": "15ml" }
+  ],
+  "keywords": [
+    "sunscreen",
+    "sunscreen spf 50",
+    "sunscreen for oily skin",
+    "acne gel",
+    "face wash for acne",
+    "vitamin c serum"
+  ]
+}

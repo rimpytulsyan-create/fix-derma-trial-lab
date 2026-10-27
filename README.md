@@ -1,61 +1,82 @@
-# Fixderma Trial Lab & Quick-Commerce Growth Intelligence (Concept Prototype)
+# Fixderma Trial Lab
 
-> **Candidate:** Rimpy Tulsyan  
-> **Role Context:** Strategic Product & Growth Leadership Prototype for Fixderma  
-> **Product Thesis:** *"Results you can trust, because we show our working."*  
-> **Disclaimer:** Illustrative / sample data for demonstration. Concept prototype. Not an official commercial website of Fixderma India Pvt. Ltd. All clinical records and participant profiles are deterministically seeded synthetic data. Designed under the principles of India's Digital Personal Data Protection (DPDP) Act, 2023.
+A prototype of a **consumer-trial and new-product-development tool** for Fixderma.
 
----
-
-## 🔬 What is Fixderma Trial Lab?
-
-Fixderma Trial Lab is an open, statistically sound cosmetic efficacy and quick-commerce growth intelligence platform. It bridges formulation substantiation with commercial execution across quick-commerce dark stores (Blinkit, Zepto, Instamart) and digital marketplaces:
-1. **Real Fixderma Hero Products:** Evaluated around **Fixderma Shadow SPF 50+ Gel**, **Fixderma Salyzap Gel for Acne**, and **Fixderma Nigrifix Cream**.
-2. **Quota-Sampled Indian Demographics:** Stratified across 6 climatic regions and Fitzpatrick III–VI tones.
-3. **Blinded Dermatologist Review:** Board-certified dermatologists evaluate before-and-after photo pairs under standardized clinical rubrics without brand identifiers.
-4. **Honest Statistics:** Every claim displays sample size ($n$), 95% Wilson score confidence intervals, and conservative intention-to-treat rates with drop-outs counted.
-5. **Quick-Commerce Stock-Out Intelligence (`/q-commerce`):** Live in-stock availability tracking across 15 pin codes in Gurgaon and Bangalore on Blinkit, Zepto, and Instamart.
-6. **Search Ranking & Share of Voice (`/search-ranking`):** Organic rank vs sponsored ad positioning for "sunscreen", "gel sunscreen", and "acne gel".
-7. **Price per ml & Offers Matrix (`/pricing-offers`):** Unit economics benchmarking against The Derma Co, Minimalist, and Aqualogica.
-8. **30-60-90 Day Strategic Plan (`/30-60-90-plan`):** Actionable roadmap to lift availability to >95% and capture Top 2 search rank.
+> *"See where a new product works best, city by city and climate by climate, before you launch it."*
 
 ---
 
-## 🧭 Routes & User Journeys
+## 1. What the Site Is and Is Not
 
-The application features an interactive **"View As"** switcher in the navigation bar to walk each stakeholder experience:
-
-### 1. Strategic Growth & Market Intelligence
-- `/q-commerce` — **Quick-Commerce In-Stock Availability Tracker:** 15 pin codes across Gurgaon & Bangalore, dark store fulfillment turnaround, and lost revenue leakage calculator.
-- `/search-ranking` — **Search Ranking & Share of Voice:** SERP audit for high-intent skincare queries on Blinkit, Zepto, and Amazon.
-- `/pricing-offers` — **Price per ml & Offers Benchmarking:** Cost-per-gram comparison across 40g, 75g, and 150g pack sizes vs direct competitors.
-- `/30-60-90-plan` — **30-60-90 Day Strategic Plan:** Candidate Rimpy Tulsyan's roadmap to own product, availability, and growth at Fixderma.
-
-### 2. Clinical & Consumer Integrity
-- `/` — **Home:** Value proposition, hero story, live platform stats, and contrast explainer.
-- `/problem` — **The 22-Person Problem:** Interactive sample size calculator citing BIS IS 4707 and ASCI Clause 1.4 substantiation standards.
-- `/shopper` — **Verified Results PDP:** Live Fixderma Shadow SPF 50+ Gel results card with transparent safety reporting (1 discontinuation out of 142 enrolled, 0 hospitalizations).
-- `/comparison` — **vs. Sampling Platforms:** Strategic differentiation matrix contrasting Trial Lab with volume sampling channels (Smytten).
-- `/participant` — **Participant Portal (Demo Mode):** Read-only simulated onboarding flow with public registration disabled for brand and legal safety.
-- `/deck` — **Executive Presentation (.PPTX):** 8-slide business strategy deck with regional spend allocations and exportable slides.
+- **What it is:** A focused prototype demonstrating how regional consumer-use studies (quota-sampled across hot-humid, hot-dry, and temperate climates) establish wearability benchmarks, Wilson 95% confidence intervals, and rule-based launch sequencing before a broad product rollout.
+- **What it is not:** An official website of Fixderma India Pvt. Ltd., a medical clinical trial registry, or a live data-collection portal. It contains no forms or submit buttons. All study metrics use seeded sample data.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 2. Site Structure (Five Pages)
 
-- **Framework:** Next.js 16 (App Router) with Turbopack
-- **Styling:** Tailwind CSS with custom clinical design tokens
-- **Icons:** Lucide React
-- **State Management:** Zustand
-- **Charting:** Recharts with Wilson score intervals
-- **Seeded Data:** Deterministic PRNG (`mulberry32`)
+Navigation order (no emojis): **Home · Study design · Results · Shopper preview · Collateral**
+
+1. **Home (`/`)**: One screen, clean whitespace. Overview of the trial engine and three core pillars (Independent participants, Every region represented, Honest numbers).
+2. **Study design (`/study`)**: Calm, read-only explanation of the protocol for Fixderma Shadow SPF 50+ Gel, demographic quota targets, five static phases, locked endpoints notice, interactive sample size planner, and 95% CI range demonstrator.
+3. **Results by region (`/results`)**: The analytical engine. Features the Study week control (Week 0, 2, 4, 8) that dynamically recomputes active cohort rates, conservative rates (counting everyone who started), climate zone breakdowns with shared-axis range bars, a rule-based suggested launch order card, dermatologist panel scores (0 to 3 scale), and the safety log.
+4. **Shopper preview (`/shopper`)**: Product page preview showing how completed (Week 8) study results, Wilson confidence intervals, participant mix, and safety reporting appear to everyday shoppers.
+5. **Collateral (`/collateral`)**: Clean download cards for the two offline strategy documents.
 
 ---
 
-## 🚀 Running Locally
+## 3. Brand, Wording & Honesty Rules
+
+- **Brand Name:** Strictly **"Fixderma"** (one word) everywhere.
+- **Labeling:** Small neutral "Sample data" chip displayed on every chart and results card.
+- **Top Notice:** Quiet single-line header above navigation: *"Concept prototype by Rimpy Tulsyan · Sample data · Not affiliated with Fixderma India Pvt. Ltd."*
+- **Excluded Terms:** No medical claims ("healing", "doctor-verified"), no efficacy claims for sunscreens ("protection rate", "favourable protection"), no star ratings, no "Triple blind", no "Intention-to-treat" (phrased as *"counting everyone who started"*), no unsourced comparisons.
+- **Voucher Sentence:** Unified across all screens: *"Participants get a ₹500 voucher for completing every check-in, the same for everyone whatever they report."*
+- **Safety Log:** Exactly 0 serious reactions and 1 moderate reaction (participant stopped using product; under review by dermatologist panel; never marked "unrelated to product").
+
+---
+
+## 4. The Market Audit PDF & Generator
+
+Market audit data (quick-commerce inventory stockouts, search ranking, pricing unit economics, and 30-60-90 plan) is kept in a separate deliverable: **`Fixderma-Quick-Commerce-Growth-Audit.pdf`** (A4 landscape, max 10 pages).
+
+### Data Kit Directory (`/audit/`)
+- `README.md`: Protocol for manual in-app data collection across Blinkit, Zepto, and Instamart.
+- `config.json`: Platform definitions, Gurugram and Bengaluru pincodes, competitor lists, and tracked SKU/keyword baskets.
+- `availability.csv`: Template with required headers for stockout tracking.
+- `search.csv`: Template with required headers for top-10 search rank and sponsored ad flags.
+- `commentary.json`: User commentary fields per page.
+- `sources.json`: Allowed public industry benchmarks and URLs.
+
+### Generating the PDF
+```bash
+# Production PDF (requires completed CSVs; refuses to build if empty):
+npm run audit:pdf
+
+# Layout preview with diagonal DRAFT watermark:
+node scripts/generate-audit-pdf.js --draft
+```
+
+---
+
+## 5. Overview Deck & PDF
+
+- Slide deck: 8-slide minimal executive overview.
+- Source PPTX: `collateral/source/FixDerma_Trial_Lab_Strategy.pptx`
+- Exported PDF: `public/collateral/Fixderma-Trial-Lab-Overview.pdf`
+- Rebuild command: `node scripts/generate-deck.js`
+
+---
+
+## 6. Running Tests & Building Locally
 
 ```bash
-npm install
-npm run dev
-# Open http://localhost:3000
+# Run honesty and consistency unit tests
+npm test
+
+# Run ESLint
+npm run lint
+
+# Compile Next.js production bundle
+npm run build
 ```
